@@ -529,7 +529,7 @@ module ActiveRecord
                 current_transaction,
                 isolation: isolation,
                 joinable: joinable,
-                run_commit_callbacks: run_commit_callbacks
+                run_commit_callbacks: false
               )
             end
 
