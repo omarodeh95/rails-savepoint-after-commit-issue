@@ -317,7 +317,7 @@ module ActiveRecord
           end
         end
 
-        if @run_commit_callbacks && !@joinable
+        if @run_commit_callbacks && joinable?
           @callbacks&.each(&:after_commit)
         elsif @callbacks
           connection.current_transaction.append_callbacks(@callbacks)
